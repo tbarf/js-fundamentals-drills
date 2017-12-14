@@ -21,7 +21,7 @@ const doubleArray = function (arr) {
  * @param {Array}
  * @return {Bool}
  */
-let sumArrays = function (arr1, arr2) {
+const sumArrays = function (arr1, arr2) {
   let combine = [];
   for (i = 0; i < arr1.length; i++) {
     combine.push(arr1[i] + arr2[i]);
@@ -36,11 +36,10 @@ let sumArrays = function (arr1, arr2) {
  * @param {String}
  * @return {Number}
  */
-let stringCount = function (str) {
+const stringCount = function (str) {
   for (i = 0; i < str.length; i++) {
     return str.length;
-  };
-
+  }
 };
 
 /* #arrayLength
@@ -50,7 +49,13 @@ let stringCount = function (str) {
  * @param {String}
  * @return {Number}
  */
-let arrayLength;
+const arrayLength = function (arr) {
+
+  for (i = 0; i < arr.length; i++) {
+    return arr.length;
+  }
+
+};
 
 /* #countAll
  *
