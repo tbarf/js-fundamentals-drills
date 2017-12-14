@@ -79,7 +79,13 @@ const countAll = function (arr) {
  * @param {Array}
  * @return {Array}
  */
-const countStrings;
+const countStrings = function (arr) {
+  let counted = [];
+  for (i = 0; i < arr.length; i++) {
+    counted.push(arr[i].length);
+  }
+  return counted;
+};
 
 /* #countAllStrings
  *
@@ -88,7 +94,13 @@ const countStrings;
  * @param {String}
  * @return {Number}
  */
-let countAllStrings;
+let countAllStrings = function (str) {
+  let total = 0;
+  for (i = 0; i < str.length; i++) {
+    total += str[i].length;
+  }
+  return total;
+};
 
 /* #convertToArray
  *
@@ -97,7 +109,9 @@ let countAllStrings;
  * @param {Object}
  * @return {Array}
  */
-let convertToArray;
+let convertToArray = function (obj) {
+
+};
 
 /* #objectSize
  *
@@ -400,7 +414,7 @@ let frequencyMap;
 let tupleConvertToObject;
 
 module.exports = {
-  doubleArray: null,
+  doubleArray: doubleArray,
   sumArrays: null,
   stringCount: null,
   arrayLength: null,
