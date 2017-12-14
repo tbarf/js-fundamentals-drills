@@ -64,7 +64,13 @@ const arrayLength = function (arr) {
  * @param {Array}
  * @return {Number}
  */
-let countAll;
+const countAll = function (arr) {
+  let counted = 0;
+  for (i = 0; i < arr.length; i++) {
+    counted += arr[i];
+  };
+  return counted;
+};
 
 /* #countStrings
  *
@@ -73,7 +79,7 @@ let countAll;
  * @param {Array}
  * @return {Array}
  */
-let countStrings;
+const countStrings;
 
 /* #countAllStrings
  *
