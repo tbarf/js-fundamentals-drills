@@ -212,7 +212,12 @@ let moreThanTenLetters = function (str) {
  * @param {Array}
  * @return {Number}
  */
-let multiplyAll;
+let multiplyAll = function (arr) {
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return arr.reduce(reducer);
+
+
+};
 
 /* #getKeys
  *
@@ -221,7 +226,11 @@ let multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function (obj) {
+  let keys = [];
+  return Object.keys(obj);
+};
+
 
 /* #sumAllPositive
  *
@@ -230,7 +239,11 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-let sumAllPositive;
+let sumAllPositive = function (str){
+
+
+  
+};
 
 /* #stringCountBelowThree
  *
