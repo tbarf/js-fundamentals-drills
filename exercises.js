@@ -199,7 +199,11 @@ let sumBelowTen = function (arr) {
  * @param {String}
  * @return {Number}
  */
-let moreThanTenLetters;
+let moreThanTenLetters = function (str) {
+  const result = str.filter(str => str.length > 10);
+
+  return result
+};
 
 /* #multiplyAll
  *
