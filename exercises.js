@@ -5,13 +5,13 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
-var doubleArray = function(arr) {
-  var result = [];
-  for (var i = 0; i < arr.length; i++) {
-    result.push(arr[i] * 2) 
+const doubleArray = function (arr) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i] * 2);
   }
-  return result
-}
+  return result;
+};
 
 /* #sumArrays
  *
@@ -21,7 +21,13 @@ var doubleArray = function(arr) {
  * @param {Array}
  * @return {Bool}
  */
-var sumArrays;
+let sumArrays = function (arr1, arr2) {
+  let combine = [];
+  for (i = 0; i < arr1.length; i++) {
+    combine.push(arr1[i] + arr2[i]);
+  }
+  return combine;
+};
 
 /* #stringCount
  *
@@ -30,7 +36,7 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+let stringCount;
 
 /* #arrayLength
  *
@@ -39,7 +45,7 @@ var stringCount;
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+let arrayLength;
 
 /* #countAll
  *
@@ -48,7 +54,7 @@ var arrayLength;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+let countAll;
 
 /* #countStrings
  *
@@ -57,7 +63,7 @@ var countAll;
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+let countStrings;
 
 /* #countAllStrings
  *
@@ -66,7 +72,7 @@ var countStrings;
  * @param {String}
  * @return {Number}
  */
-var countAllStrings;
+let countAllStrings;
 
 /* #convertToArray
  *
@@ -75,7 +81,7 @@ var countAllStrings;
  * @param {Object}
  * @return {Array}
  */
-var convertToArray;
+let convertToArray;
 
 /* #objectSize
  *
@@ -84,7 +90,7 @@ var convertToArray;
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+let objectSize;
 
 /* #createZeroFilledArray
  *
@@ -93,7 +99,7 @@ var objectSize;
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+let createZeroFilledArray;
 
 /* #poppedArray
  *
@@ -102,7 +108,7 @@ var createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+let poppedArray;
 
 /* #splitString
  *
@@ -111,7 +117,7 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+let splitString;
 
 /* #lengthOfLast
  *
@@ -120,7 +126,7 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+let lengthOfLast;
 
 /* #sumBelowTen
  *
@@ -129,7 +135,7 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+let sumBelowTen;
 
 /* #moreThanTenLetters
  *
@@ -138,7 +144,7 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+let moreThanTenLetters;
 
 /* #multiplyAll
  *
@@ -147,7 +153,7 @@ var moreThanTenLetters;
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+let multiplyAll;
 
 /* #getKeys
  *
@@ -165,7 +171,7 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+let sumAllPositive;
 
 /* #stringCountBelowThree
  *
@@ -174,7 +180,7 @@ var sumAllPositive;
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+let stringCountBelowThree;
 
 /* #countObjects
  *
@@ -183,7 +189,7 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+let countObjects;
 
 /* #getObjectKeys
  *
@@ -192,7 +198,7 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+let getObjectKeys;
 
 /* #getObjectValues
  *
@@ -201,7 +207,7 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+let getObjectValues;
 
 /* #makeObject
  *
@@ -211,7 +217,7 @@ var getObjectValues;
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+let makeObject;
 
 /* #makeObjectReverse
  *
@@ -221,7 +227,7 @@ var makeObject;
  * @param {String}
  * @return {Bool}
  */
-var makeObjectReverse;
+let makeObjectReverse;
 
 /* #tupleToObject
  *
@@ -230,7 +236,7 @@ var makeObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+let tupleToObject;
 
 /* #tupleToObjectReverse
  *
@@ -239,7 +245,7 @@ var tupleToObject;
  * @param {Array}
  * @return {Object}
  */
-var tupleToObjectReverse;
+let tupleToObjectReverse;
 
 /* #strToKeys
  *
@@ -248,7 +254,7 @@ var tupleToObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var strToKeys;
+let strToKeys;
 
 /* #getValues
  *
@@ -257,7 +263,7 @@ var strToKeys;
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+let getValues;
 
 /* #getKeys
  *
@@ -270,13 +276,13 @@ var getKeys;
 
 /* #objectToArray
  *
- * Takes in an object and returns an array of tuples where each tuple has 
+ * Takes in an object and returns an array of tuples where each tuple has
  * the object's key as element 0 and object's value as element 1.
  *
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+let objectToArray;
 
 /* #arrayToObject
  *
@@ -286,18 +292,18 @@ var objectToArray;
  * @param {Array}
  * @return {Object}
  */
-var arrayToObject;
+let arrayToObject;
 
 /* #arraysToObject
  *
- * takes in two arrays, the first array elements will be keys of an object and second array elements 
+ * takes in two arrays, the first array elements will be keys of an object and second array elements
  * will be values of an object.
  *
  * @param {Array}
  * @param {Array}
  * @return {Object}
  */
-var arraysToObject;
+let arraysToObject;
 
 /* #objectsToTuples
  *
@@ -307,7 +313,7 @@ var arraysToObject;
  * @param {Object}
  * @return {Array}
  */
-var objectsToTuples;
+let objectsToTuples;
 
 /* #mapArrayValues
  *
@@ -316,7 +322,7 @@ var objectsToTuples;
  * @param {Array}
  * @return {Object}
  */
-var mapArrayValues;
+let mapArrayValues;
 
 /* #mapStringCounts
  *
@@ -327,36 +333,36 @@ var mapArrayValues;
  * @param {Array}
  * @return {Object}
  */
-var mapStringCounts;
+let mapStringCounts;
 
 /* #arrayToObjectNums
  *
- * takes in an array of numbers and returns an object with keys set to 
+ * takes in an array of numbers and returns an object with keys set to
  * each element of the array and all values set to true.
  *
  * @param {Array}
  * @return {Object}
  */
-var arrayToObjectNums;
+let arrayToObjectNums;
 
 /* #stringToKeys
  *
  * takes in a string and returns an object whos keys are each letter of the string and all values set to true.
- * 
+ *
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+let stringToKeys;
 
 /* #charCountMap
  *
- * takes in an array of strings and returns an object with keys set to each element of the array 
+ * takes in an array of strings and returns an object with keys set to each element of the array
  * and values set to the character count of each key name.
  *
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+let charCountMap;
 
 /* #frequencyMap
  *
@@ -365,22 +371,21 @@ var charCountMap;
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+let frequencyMap;
 
 /* #tupleConvertToObject
  *
- * takes in an array of tuples and and returns an object whos keys are 
+ * takes in an array of tuples and and returns an object whos keys are
  * the first element of the tuples and values are second element of the tuples.
  *
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
-
+let tupleConvertToObject;
 
 module.exports = {
   doubleArray: null,
-  sumArrays: null, 
+  sumArrays: null,
   stringCount: null,
   arrayLength: null,
   countAll: null,
@@ -419,4 +424,4 @@ module.exports = {
   charCountMap: null,
   frequencyMap: null,
   tupleConvertToObject: null
-}
+};
