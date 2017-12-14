@@ -121,8 +121,8 @@ let convertToArray = function (obj) {
  * @return {Number}
  */
 let objectSize = function (obj) {
-
-
+  temparr = obj.entries;
+  return temparr.length;
 };
 
 /* #createZeroFilledArray
@@ -132,7 +132,13 @@ let objectSize = function (obj) {
  * @param {Number}
  * @return {Zero}
  */
-let createZeroFilledArray;
+let createZeroFilledArray = function (num) {
+  let temparr = [];
+  for (i = 0; i < num; i++) {
+    temparr[i] = 0;
+  }
+  return temparr;
+};
 
 /* #poppedArray
  *
@@ -141,7 +147,14 @@ let createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-let poppedArray;
+let poppedArray = function (arr) {
+  let poped = arr.pop;
+
+  return arr;
+
+};
+
+
 
 /* #splitString
  *
@@ -150,7 +163,10 @@ let poppedArray;
  * @param {String}
  * @return {Array}
  */
-let splitString;
+let splitString = function (str) {
+  let temp = str.split("");
+  return temp;
+};
 
 /* #lengthOfLast
  *
@@ -159,7 +175,10 @@ let splitString;
  * @param {String}
  * @return {Number}
  */
-let lengthOfLast;
+let lengthOfLast = function (str) {
+  temp = str.pop();
+  return temp.length
+};
 
 /* #sumBelowTen
  *
