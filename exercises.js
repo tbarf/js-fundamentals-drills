@@ -110,7 +110,7 @@ let countAllStrings = function (str) {
  * @return {Array}
  */
 let convertToArray = function (obj) {
-
+  return Object.values(obj);
 };
 
 /* #objectSize
@@ -120,7 +120,10 @@ let convertToArray = function (obj) {
  * @param {Object}
  * @return {Number}
  */
-let objectSize;
+let objectSize = function (obj) {
+
+
+};
 
 /* #createZeroFilledArray
  *
