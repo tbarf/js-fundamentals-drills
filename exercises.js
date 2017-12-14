@@ -36,7 +36,12 @@ let sumArrays = function (arr1, arr2) {
  * @param {String}
  * @return {Number}
  */
-let stringCount;
+let stringCount = function (str) {
+  for (i = 0; i < str.length; i++) {
+    return str.length;
+  };
+
+};
 
 /* #arrayLength
  *
