@@ -22,7 +22,7 @@ const doubleArray = function (arr) {
  * @return {Bool}
  */
 const sumArrays = function (arr1, arr2) {
-  let combine = [];
+  const combine = [];
   for (i = 0; i < arr1.length; i++) {
     combine.push(arr1[i] + arr2[i]);
   }
@@ -50,11 +50,9 @@ const stringCount = function (str) {
  * @return {Number}
  */
 const arrayLength = function (arr) {
-
   for (i = 0; i < arr.length; i++) {
     return arr.length;
   }
-
 };
 
 /* #countAll
@@ -68,7 +66,7 @@ const countAll = function (arr) {
   let counted = 0;
   for (i = 0; i < arr.length; i++) {
     counted += arr[i];
-  };
+  }
   return counted;
 };
 
@@ -80,7 +78,7 @@ const countAll = function (arr) {
  * @return {Array}
  */
 const countStrings = function (arr) {
-  let counted = [];
+  const counted = [];
   for (i = 0; i < arr.length; i++) {
     counted.push(arr[i].length);
   }
@@ -94,7 +92,7 @@ const countStrings = function (arr) {
  * @param {String}
  * @return {Number}
  */
-let countAllStrings = function (str) {
+const countAllStrings = function (str) {
   let total = 0;
   for (i = 0; i < str.length; i++) {
     total += str[i].length;
@@ -109,7 +107,7 @@ let countAllStrings = function (str) {
  * @param {Object}
  * @return {Array}
  */
-let convertToArray = function (obj) {
+const convertToArray = function (obj) {
   return Object.values(obj);
 };
 
@@ -120,7 +118,7 @@ let convertToArray = function (obj) {
  * @param {Object}
  * @return {Number}
  */
-let objectSize = function (obj) {
+const objectSize = function (obj) {
   temparr = obj.entries;
   return temparr.length;
 };
@@ -132,8 +130,8 @@ let objectSize = function (obj) {
  * @param {Number}
  * @return {Zero}
  */
-let createZeroFilledArray = function (num) {
-  let temparr = [];
+const createZeroFilledArray = function (num) {
+  const temparr = [];
   for (i = 0; i < num; i++) {
     temparr[i] = 0;
   }
@@ -147,14 +145,11 @@ let createZeroFilledArray = function (num) {
  * @param {Array}
  * @return {Array}
  */
-let poppedArray = function (arr) {
-  let poped = arr.pop;
+const poppedArray = function (arr) {
+  const poped = arr.pop;
 
   return arr;
-
 };
-
-
 
 /* #splitString
  *
@@ -163,8 +158,8 @@ let poppedArray = function (arr) {
  * @param {String}
  * @return {Array}
  */
-let splitString = function (str) {
-  let temp = str.split("");
+const splitString = function (str) {
+  const temp = str.split('');
   return temp;
 };
 
@@ -175,9 +170,9 @@ let splitString = function (str) {
  * @param {String}
  * @return {Number}
  */
-let lengthOfLast = function (str) {
+const lengthOfLast = function (str) {
   temp = str.pop();
-  return temp.length
+  return temp.length;
 };
 
 /* #sumBelowTen
@@ -187,7 +182,15 @@ let lengthOfLast = function (str) {
  * @param {Array}
  * @return {Number}
  */
-let sumBelowTen;
+let sumBelowTen = function (arr) {
+  let temp = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] < 10) {
+      temp += arr[i];
+    }
+    return temp;
+  }
+};
 
 /* #moreThanTenLetters
  *
@@ -436,7 +439,7 @@ let frequencyMap;
 let tupleConvertToObject;
 
 module.exports = {
-  doubleArray: doubleArray,
+  doubleArray,
   sumArrays: null,
   stringCount: null,
   arrayLength: null,
