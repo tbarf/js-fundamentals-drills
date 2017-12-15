@@ -279,7 +279,10 @@ let countObjects;
  * @param {Object}
  * @return {Array}
  */
-let getObjectKeys;
+let getObjectKeys = function(obj){
+  return obj.keys();
+
+};
 
 /* #getObjectValues
  *
@@ -288,7 +291,9 @@ let getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-let getObjectValues;
+let getObjectValues function(obj){
+return obj.values();
+};
 
 /* #makeObject
  *
