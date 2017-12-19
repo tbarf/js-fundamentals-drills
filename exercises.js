@@ -203,14 +203,17 @@ let sumBelowTen = function (arr) {
  * @return {Number}
  */
 let moreThanTenLetters = function (arr) {
-  let total = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i].length < 10) {
-      total += 1;
-
+  temp = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 10) {
+      temp += 1;
     }
+
   }
+
+  return temp;
 };
+
 
 /* #multiplyAll
  *
@@ -220,9 +223,12 @@ let moreThanTenLetters = function (arr) {
  * @return {Number}
  */
 let multiplyAll = function (arr) {
-
+  count = 1;
+  for (let i = 0; i < arr.length; i++) {
+    count *= arr[i];
+  }
+  return count
 };
-
 /* #getKeys
  *
  * Takes in an object and returns an array of the object's keys.
@@ -243,33 +249,44 @@ var getKeys = function (obj) {
  * @param {String}
  * @return {Number}
  */
-let sumAllPositive = function (arr) {
-  let temp = 0;
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i] <= 0) {
-      temp += arr[i];
+let sumAllPositive = function (nums) {
+  var result = 0;
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] > 0) {
+      result += nums[i]
     }
-    return temp;
   }
 };
-console.log((sumAllPositive(nums))
-    /* #stringCountBelowThree
-     *
-     * Takes in an array of strings and returns the amount of strings that have three characters or less.
-     *
-     * @param {Array}
-     * @return {Number}
-     */
 
+/* #stringCountBelowThree
+ *
+ * Takes in an array of strings and returns the amount of strings that have three characters or less.
+ *
+ * @param {Array}
+ * @return {Number}
+ */
+
+let stringCountBelowThree = function (arr) {
+    let result = 0;
+    for (var i = 0; i < arr[i].length; i++) {
+      if (arr[i].length <= 3) {
+        result += 1;
+      }
+    }
     let stringCountBelowThree = function (arr) {
-      total = 0
-      for (var i = 0; i < arr.length; i++) {
+      var fruits = ['Apple', 'Banana'];
+      let result = 0;
+      for (var i = 0; i < arr[i].length; i++) {
         if (arr[i].length <= 3) {
-          total += 1;
+          result += arr[i].length;
         }
       }
-      return total;
+
+      return result;
     };
+
+
+    console.log(stringCountBelowThree(fruits));
 
     /* #countObjects
      *
@@ -278,152 +295,217 @@ console.log((sumAllPositive(nums))
      * @param {Array}
      * @return {Number}
      */
-    let countObjects function(arr){
-      return arr.length;
+
+
+    let countObjects = function (arr) {
+      let num = 0;
+      for (let i = 0; i < arr.length; i++) {
+        num += 1;
+        return num;
+      };
+
+      /* #getObjectKeys
+       *
+       * Takes in an object and returns an array of all the object's keys.
+       *
+       * @param {Object}
+       * @return {Array}
+       */
+      let getObjectKeys = function (obj) {
+        return Object.keys(obj);
+
+      };
+
+      /* #getObjectValues
+       *
+       * Takes in an object and returns an array of all the object's values.
+       *
+       * @param {Object}
+       * @return {Array}
+       */
+      let getObjectValues = function (obj) {
+        return Object.values(obj);
+      };
+
+      /* #makeObject
+       *
+       * Takes in two arguments 'key' and 'value' and returns a single key-value pair in an object.
+       *
+       * @param {String}
+       * @param {String}
+       * @return {Object}
+       */
+      let makeObject = function (str1, str2) {
+        let obj = {};
+        obj.key = str1;
+        obj.value = str2;
+        return obj;
+      };
+
+      /* #makeObjectReverse
+       *
+       * Takes in two arguments 'value' and 'key' and returns a single key-value pair in an object.
+       *
+       * @param {String}
+       * @param {String}
+       * @return {Bool}
+       */
+      let makeObjectReverse = function (str1, str2) {
+        let obj = {};
+        obj.value = str1;
+        obj.key = str2;
+        return obj;
+      };
+
+      /* #tupleToObject
+       *
+       * Takes in a tuple (an array with two elements) and returns it into a single key-value pair in an object.
+       *
+       * @param {Array}
+       * @return {Object}
+       */
+      let tupleToObject = function (arr) {
+        let obj = {};
+        obj.key = arr[0];
+        obj.value = arr[1];
+        return obj;
+      };
+
+      /* #tupleToObjectReverse
+       *
+       * Takes in a tuple and returns it into a single key-value pair with second tuple element as key and first tuple element as value.
+       *
+       * @param {Array}
+       * @return {Object}
+       */
+      let tupleToObjectReverse = function (arr) {
+        let obj = {};
+        obj.value = arr[0];
+        obj.key = arr[1];
+        return obj;
+      };
+
+      /* #strToKeys
+       *
+       * Takes in an array of strings and returns an object with all string elements as the object's keys and all values set to 0.
+       *
+       * @param {Array}
+       * @return {Object}
+       */
+      let strToKeys = function (arr) {
+        let obj = {};
+        for (i = 0; i < arr.length; i++) {
+          obj.keys = arr;
+          obj.values = 0;
+        }
+        return obj;
+      };
+      /* #getValues
+       *
+       * Takes in an object and returns an array of all the object's values.
+       *
+       * @param {Object}
+       * @return {Array}
+       */
+      let getValues = function (obj) {
+        return Object.values(obj);
+
+      };
+
+      /* #getKeys
+       *
+       * Takes in an object and returns an array of the object's keys.
+       *
+       * @param {Object}
+       * @return {Array}
+       */
+      let getKeys = function (obj) {
+        return Object.keys(obj);
+      };
+
+      /* #objectToArray
+       *
+       * Takes in an object and returns an array of tuples where each tuple has
+       * the object's key as element 0 and object's value as element 1.
+       *
+       * @param {Object}
+       * @return {Array}
+       */
+      let objectToArray = function (obj) {
+        return Object.entries(obj);
+      };
+
+      /* #arrayToObject
+       *
+       * takes in an array and returns an object with keys set to the elements in the array and
+       * all values set to false.
+       *
+       * @param {Array}*
+       * @return { Object }
+       */
+      let arrayToObject = function (arr) {
+        let obj = {};
+
+        for (var i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+          obj[arr[i]] = false;
+          console.log(obj);
+        }
+        return obj;
+      };
+
+      /* #arraysToObject
+       *
+       * takes in two arrays, the first array elements will be keys of an object and second array elements
+       * will be values of an object.
+       *
+       * @param {Array}
+       * @param {Array}
+       * @return {Object}
+       */
+      let arraysToObject = function (arr1, arr2) {
+        let obj = {};
+        for (var i = 0; i < arr1.length; i++) {
+          obj[arr1[i]] = arr2[i];
+        }
+        return obj;
+      };
+
+
+
+      /* #objectsToTuples
+       *
+       * takes in two objects and returns an array of tuples of the key value pairs of all objects in both arrays.
+       *
+       * @param {Object}
+       * @param {Object}
+       * @return {Array}
+       */
+
+      let objectsToTuples = function (obj1, obj2) {
+        arr1 = Object.entries(obj1);
+        arr2 = Object.entries(obj2);
+        arr3 = [];
+        arr3.push(arr1, arr2)
+        console.log(arr3);
+        return arr3
+      };
+
+
+      //   arr1 = [];
+      //   arr2 = [];
+      //   arr3 = [];
+      //   for(var key in obj1) {
+      //     var value = obj1[key];
+      //     arr1.push(value);
+      //   }
+      //   for(var key in obj2) {
+      // var value = obj2[key];
+      //     arr2.push(value);
+      //   }
+      //   arr3.push(arr1,arr2)
+      //   return arr3;
     };
-
-    /* #getObjectKeys
-     *
-     * Takes in an object and returns an array of all the object's keys.
-     *
-     * @param {Object}
-     * @return {Array}
-     */
-    let getObjectKeys = function (obj) {
-      return Obj.keys(obj);
-
-    };
-
-    /* #getObjectValues
-     *
-     * Takes in an object and returns an array of all the object's values.
-     *
-     * @param {Object}
-     * @return {Array}
-     */
-    let getObjectValues = function (obj) {
-      return Obj.values(obj);
-    };
-
-    /* #makeObject
-     *
-     * Takes in two arguments 'key' and 'value' and returns a single key-value pair in an object.
-     *
-     * @param {String}
-     * @param {String}
-     * @return {Object}
-     */
-    let makeObject = function (key,value) {
-      let obj = {};
-      let obj.key = key;
-      let obj.value = value;
-      return obj;
-    };
-
-    /* #makeObjectReverse
-     *
-     * Takes in two arguments 'value' and 'key' and returns a single key-value pair in an object.
-     *
-     * @param {String}
-     * @param {String}
-     * @return {Bool}
-     */
-    let makeObjectReverse = function (value,key) {
-      let newObj = {};
-      newObj.value = "value";
-      newObj.key = "key";
-      return newObj;
-    };
-
-    /* #tupleToObject
-     *
-     * Takes in a tuple (an array with two elements) and returns it into a single key-value pair in an object.
-     *
-     * @param {Array}
-     * @return {Object}
-     */
-    let tupleToObject;
-
-    /* #tupleToObjectReverse
-     *
-     * Takes in a tuple and returns it into a single key-value pair with second tuple element as key and first tuple element as value.
-     *
-     * @param {Array}
-     * @return {Object}
-     */
-    let tupleToObjectReverse;
-
-    /* #strToKeys
-     *
-     * Takes in an array of strings and returns an object with all string elements as the object's keys and all values set to 0.
-     *
-     * @param {Array}
-     * @return {Object}
-     */
-    let strToKeys;
-
-    /* #getValues
-     *
-     * Takes in an object and returns an array of all the object's values.
-     *
-     * @param {Object}
-     * @return {Array}
-     */
-    let getValues = function(obj){
-      return Object.values(obj);
-    };
-
-    /* #getKeys
-     *
-     * Takes in an object and returns an array of the object's keys.
-     *
-     * @param {Object}
-     * @return {Array}
-     */
-    let getKeys = function(obj){
-      return Object.keys(obj);
-    };
-
-    /* #objectToArray
-     *
-     * Takes in an object and returns an array of tuples where each tuple has
-     * the object's key as element 0 and object's value as element 1.
-     *
-     * @param {Object}
-     * @return {Array}
-     */
-    let objectToArray;
-
-    /* #arrayToObject
-     *
-     * takes in an array and returns an object with keys set to the elements in the array and
-     * all values set to false.
-     *
-     * @param {Array}
-     * @return {Object}
-     */
-    let arrayToObject;
-
-    /* #arraysToObject
-     *
-     * takes in two arrays, the first array elements will be keys of an object and second array elements
-     * will be values of an object.
-     *
-     * @param {Array}
-     * @param {Array}
-     * @return {Object}
-     */
-    let arraysToObject;
-
-    /* #objectsToTuples
-     *
-     * takes in two objects and returns an array of tuples of the key value pairs of all objects in both arrays.
-     *
-     * @param {Object}
-     * @param {Object}
-     * @return {Array}
-     */
-    let objectsToTuples;
 
     /* #mapArrayValues
      *
@@ -432,7 +514,14 @@ console.log((sumAllPositive(nums))
      * @param {Array}
      * @return {Object}
      */
-    let mapArrayValues;
+    let mapArrayValues = function (arr) {
+      let obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        obj[arr[i]] = true;
+      }
+      return obj;
+    };
+
 
     /* #mapStringCounts
      *
@@ -443,8 +532,17 @@ console.log((sumAllPositive(nums))
      * @param {Array}
      * @return {Object}
      */
-    let mapStringCounts;
-
+    let mapStringCounts = function (arr) {
+      let obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        if (obj[arr[i]] >= 5) {
+          Object.values(obj) = true;
+        } else {
+          Object.values(obj) = false;
+        }
+        return obj;
+      }
+    };
     /* #arrayToObjectNums
      *
      * takes in an array of numbers and returns an object with keys set to
@@ -453,7 +551,13 @@ console.log((sumAllPositive(nums))
      * @param {Array}
      * @return {Object}
      */
-    let arrayToObjectNums;
+    let arrayToObjectNums = function (arr) {
+      let obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        result[arr[i]] = true;
+      }
+      return obj;
+    };
 
     /* #stringToKeys
      *
@@ -462,7 +566,15 @@ console.log((sumAllPositive(nums))
      * @param {String}
      * @return {Object}
      */
-    let stringToKeys;
+    let stringToKeys = function (str) {
+      let result = {}
+      let splitted = str.split('');
+      for (var i = 0; i < splitted.length; i++) {
+        result[splitted[i]] = true;
+      }
+
+      return result
+    };
 
     /* #charCountMap
      *
@@ -472,7 +584,13 @@ console.log((sumAllPositive(nums))
      * @param {Array}
      * @return {Object}
      */
-    let charCountMap;
+    let charCountMap = function (arr) {
+      let obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        obj[arr[i]] = arr[i].length;
+      }
+      return obj;
+    };
 
     /* #frequencyMap
      *
@@ -481,7 +599,17 @@ console.log((sumAllPositive(nums))
      * @param {String}
      * @return {Bool}
      */
-    let frequencyMap;
+    let frequencyMap = function (arr) {
+      let obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        if (obj.hasOwnProperty(arr[i])) {
+          obj[arr[i]]++;
+        } else {
+          obj[arr[i]] = 1;
+        }
+      }
+      return obj;
+    };
 
     /* #tupleConvertToObject
      *
@@ -491,47 +619,53 @@ console.log((sumAllPositive(nums))
      * @param {String}
      * @return {Bool}
      */
-    let tupleConvertToObject;
+    let tupleConvertToObject = function (arr) {
+      let obj = {};
+      for (var i = 0; i < arr.length; i++) {
+        obj[arr[i][0]] = arr[i][1];
+      }
+      return obj;
+    };
 
     module.exports = {
-      doubleArray,
-      sumArrays: null,
-      stringCount: null,
-      arrayLength: null,
-      countAll: null,
-      countStrings: null,
-      countAllStrings: null,
-      convertToArray: null,
-      objectSize: null,
-      createZeroFilledArray: null,
-      poppedArray: null,
-      splitString: null,
-      lengthOfLast: null,
-      sumBelowTen: null,
-      moreThanTenLetters: null,
-      multiplyAll: null,
-      getKeys: null,
-      sumAllPositive: null,
-      stringCountBelowThree: null,
-      countObjects: null,
-      getObjectKeys: null,
-      getObjectValues: null,
-      makeObject: null,
-      makeObjectReverse: null,
-      tupleToObject: null,
-      tupleToObjectReverse: null,
-      strToKeys: null,
-      getValues: null,
-      getKeys: null,
-      objectToArray: null,
-      arrayToObject: null,
-      arraysToObject: null,
-      objectsToTuples: null,
-      mapArrayValues: null,
-      mapStringCounts: null,
-      arrayToObjectNums: null,
-      stringToKeys: null,
-      charCountMap: null,
-      frequencyMap: null,
-      tupleConvertToObject: null
+      doubleArray: doubleArray,
+      sumArrays: sumArrays,
+      stringCount: stringCount,
+      arrayLength: arrayLength,
+      countAll: countAll,
+      countStrings: countStrings,
+      countAllStrings: countAllStrings,
+      convertToArray: convertToArray,
+      objectSize: objectSize,
+      createZeroFilledArray: createZeroFilledArray,
+      poppedArray: poppedArray,
+      splitString: splitString,
+      lengthOfLast: lengthOfLast,
+      sumBelowTen: sumBelowTen,
+      moreThanTenLetters: moreThanTenLetters,
+      multiplyAll: multiplyAll,
+      getKeys: getKeys,
+      sumAllPositive: sumAllPositive,
+      stringCountBelowThree: stringCountBelowThree,
+      countObjects: countObjects,
+      getObjectKeys: getObjectKeys,
+      getObjectValues: getObjectValues,
+      makeObject: makeObject,
+      makeObjectReverse: makeObjectReverse,
+      tupleToObject: tupleToObject,
+      tupleToObjectReverse: tupleToObjectReverse,
+      strToKeys: strToKeys,
+      getValues: getValues,
+      getKeys: getKeys,
+      objectToArray: objectToArray,
+      arrayToObject: arrayToObject,
+      arraysToObject: arraysToObject,
+      objectsToTuples: objectsToTuples,
+      mapArrayValues: mapArrayValues,
+      mapStringCounts: mapStringCounts,
+      arrayToObjectNums: arrayToObjectNums,
+      stringToKeys: stringToKeys,
+      charCountMap: charCountMap,
+      frequencyMap: frequencyMap,
+      tupleConvertToObject: tupleConvertToObject
     };
